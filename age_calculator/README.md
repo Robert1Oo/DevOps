@@ -1,4 +1,5 @@
-![CI/CD Pipeline](https://github.com/Robert1Oo/DevOps/age_calculator/actions/workflows/action.yml/badge.svg)
+![CI/CD Pipeline](https://github.com/Robert1Oo/DevOps/actions/workflows/age_calculator/.github/workflows/actions.yaml/badge.svg)
+
 
 
 ## Welcome
