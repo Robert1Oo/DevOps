@@ -1,3 +1,5 @@
+![CI/CD Pipeline](https://github.com/Robert1Oo/DevOps/actions/workflows/action.yml/badge.svg)
+
 ## Welcome
 
 This app calculates your age, all you you need to do is to provide your birth date, just apply the following commands on the terminal:
