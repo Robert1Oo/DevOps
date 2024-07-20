@@ -7,8 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  release:
-    types: [created]
 
 jobs:
   build:
@@ -25,8 +23,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m venv venv
-        source venv/bin/activate
+        cd age_calculator
         pip install -r requirements.txt
 
     - name: Set up Docker Buildx
@@ -41,7 +38,7 @@ jobs:
     - name: Build and push Docker image
       id: docker_build
       run: |
-        IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/my-flask-app
+        IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/age_calculator
         TAG=${{ github.sha }}
         docker build -t $IMAGE_NAME:$TAG .
         docker push $IMAGE_NAME:$TAG
@@ -64,7 +61,7 @@ jobs:
 
     - name: Pull and tag Docker image
       run: |
-        IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/my-flask-app
+        IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/age_calculator
         TAG=${{ steps.docker_build.outputs.tag }}
         RELEASE_TAG=${{ github.event.release.tag_name }}
         docker pull $IMAGE_NAME:$TAG
