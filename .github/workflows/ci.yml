@@ -59,10 +59,11 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: .
-        dockerfile: Docker/Dockerfile
+        file: Docker/Dockerfile  # Correct input name for specifying the Dockerfile path
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/your-repo-name:latest
 
     - name: Logout from Docker Hub
       run: docker logout
+
 
