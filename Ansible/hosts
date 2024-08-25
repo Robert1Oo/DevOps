@@ -1,0 +1,7 @@
+[webservers]
+23.20.72.195 key1=val1 key2=val2
+52.90.202.226
+3.81.138.86
+
+[all:vars]
+ansible_user=ubuntu
