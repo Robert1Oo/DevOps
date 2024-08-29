@@ -1,7 +1,8 @@
 [webservers]
-23.20.72.195 key1=val1 key2=val2
-52.90.202.226
-3.81.138.86
+3.82.200.77
+54.158.241.155
+34.239.132.161
 
 [all:vars]
+ansible_ssh_private_key_file=vockey.pem
 ansible_user=ubuntu

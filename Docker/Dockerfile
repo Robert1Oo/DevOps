@@ -5,13 +5,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # copy the requirements file into the working dir
-COPY ../Web-app/requirements.txt /app/
+COPY /Web-app/requirements.txt /app/
 
 # install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # copy the app directory contents into the container at /app
-COPY ../Web-app /app
+COPY /Web-app /app
 
 # make port 5000 available to the world outside this container
 EXPOSE 5000
