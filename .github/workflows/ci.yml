@@ -58,8 +58,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: .
-        file: Docker/Dockerfile  # Correct input name for specifying the Dockerfile path
+        context: Docker
+        file: Dockerfile 
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/web-app:latest
 

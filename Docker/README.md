@@ -1,39 +1,94 @@
 # Hello
 
-These instructions helps you to deal with the app as a container, wether you want to devlop the current app then containerize it or just play with the available features directly.
+These instructions guide you on how to work with the app as a Docker container, whether you want to develop the current app and then containerize it or simply explore its available features.
 
-# Develop then containerize
+## Develop Then Containerize
 
-#### After finishing the edits you want and saving them, open terminal and do the following:
+### 1. Build and Run the Container
 
-cd age_calculator
+After making and saving your edits, follow these steps:
 
-docker build -t age_calculator .
+1. Open your terminal.
+2. Navigate to the project directory:
 
-docker run --name app1 -p 5000:5000 age_calculator
+   ```bash
+   cd age_calculator
+   ```
 
-http://127.0.0.1:5000 (open in the web browser, provide your birth date then enter)
+3. Build the Docker image:
 
-#### Back to the terminal:
+   ```bash
+   docker build -t age_calculator .
+   ```
 
-ctrl + c
+4. Run the Docker container:
 
-docker container rm app1
+   ```bash
+   docker run --name app1 -p 5000:5000 age_calculator
+   ```
 
-# Use the ready-to-use container
+5. Open your web browser and navigate to:
 
-#### Download the image:
+   ```
+   http://127.0.0.1:5000
+   ```
 
+6. Provide your birth date and press enter.
+
+### 2. Stop and Remove the Container
+
+To stop the app and clean up:
+
+1. Go back to the terminal and press:
+
+   ```
+   Ctrl + C
+   ```
+
+2. Remove the container:
+
+   ```bash
+   docker container rm app1
+   ```
+
+## Use the Ready-to-Use Container
+
+### 1. Download the Image
+
+If you want to skip development and use the pre-built container, download the image with:
+
+```bash
 docker pull robert1oo/age_calculator:latest
+```
 
-#### Run the container:
+### 2. Run the Container
 
+Start the container with:
+
+```bash
 docker run --name app1 -p 5000:5000 robert1oo/age_calculator
+```
 
-http://127.0.0.1:5000 (open in the web browser, provide your birth date then enter)
+Open your web browser and navigate to:
 
-#### Back to the terminal:
+```
+http://127.0.0.1:5000
+```
 
-ctrl + c
+Provide your birth date and press enter.
 
-docker container rm app1
+### 3. Stop and Remove the Container
+
+To stop the app and clean up:
+
+1. Go back to the terminal and press:
+
+   ```
+   Ctrl + C
+   ```
+
+2. Remove the container:
+
+   ```bash
+   docker container rm app1
+   ```

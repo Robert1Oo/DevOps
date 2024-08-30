@@ -1,31 +1,57 @@
 ## Welcome
 
-This app calculates your age, all you you need to do is to provide your birth date, just apply the following commands on the terminal:
+This app calculates your age. All you need to do is provide your birth date and follow the steps below in your terminal.
 
+## Clone the Repository
 
-## clone the repo: 
+```bash
 git clone https://github.com/Robert1Oo/DevOps.git
+```
 
-## create virtual python environment:
-cd DevOps/age_calculator/
+## Create a Python Virtual Environment
 
-python3 -m venv age_calc_venv
+```bash
+cd DevOps/Docker/Web-app
 
-source age_calc_venv/bin/activate
+python3 -m venv app_venv
 
-## download the app framework:
+source app_venv/bin/activate
+```
+
+## Install the App Framework
+
+```bash
 pip install flask
+```
 
-## run the app
+## Run the App
+
+```bash
 python3 app.py
+```
 
-## try it
-http://127.0.0.1:5000 (open in the web browser, provide your birth date then enter)
+## Try It Out
 
+Open your web browser and navigate to:
 
-## Close the app
-back to the terminal
+```
+http://127.0.0.1:5000
+```
 
-ctrl + c
+Provide your birth date and press enter.
 
-deactivate
+## Close the App
+
+To stop the app and exit the virtual environment:
+
+1. Go back to the terminal and press:
+
+   ```
+   Ctrl + C
+   ```
+
+2. Deactivate the virtual environment:
+
+   ```bash
+   deactivate
+   ```
