@@ -58,8 +58,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: Docker
-        file: Dockerfile 
+        context: ./Docker
+        file: ./Docker/Dockerfile 
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/web-app:latest
 
