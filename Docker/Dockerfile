@@ -17,7 +17,7 @@ COPY Web-app /app
 EXPOSE 5000
 
 # define environment variable
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 
 # run the application
 CMD ["flask", "run", "--host=0.0.0.0"]

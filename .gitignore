@@ -1,4 +1,23 @@
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.swp
+
+# Private key files
+*.pem
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Local Terraform directories
 .terraform/
-vockey.pem
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+

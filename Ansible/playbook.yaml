@@ -1,6 +1,8 @@
 - name: Deploy Docker container for web app
   hosts: webservers
-  become: yes  # Ensure privilege escalation
+  become: yes
+  vars_files:
+    - vars.yaml
   tasks:
     - name: Update APT and install prerequisites
       apt:
@@ -38,9 +40,6 @@
     - name: Log in to Docker Hub
       shell: |
         echo "{{ docker_password }}" | docker login -u "{{ docker_username }}" --password-stdin
-      vars:
-        docker_username: "{{ docker_username }}"
-        docker_password: "{{ docker_password }}"
 
     - name: Pull the Docker image
       docker_image:
@@ -53,5 +52,5 @@
         image: robert1oo/web-app
         state: started
         ports:
-          - "80:5000"  # Expose port 5000 of the container on port 80 of the EC2 instance
+          - "80:5000"
 
