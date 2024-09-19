@@ -1,33 +1,26 @@
-## Welcome
-
-This app calculates your age. All you need to do is provide your birth date and follow the steps below in your terminal.
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/Robert1Oo/DevOps.git
-```
+## Run the app on your machine without container
 
 ## Create a Python Virtual Environment
 
 ```bash
-cd DevOps/Docker/Web-app
+cd DevOps/docker/app
 
-python3 -m venv app_venv
+python3 -m venv venv
 
-source app_venv/bin/activate
+source venv/bin/activate
 ```
 
-## Install the App Framework
+## Install the App requirements
 
 ```bash
-pip install flask
+pip install -r requirements.txt
 ```
 
-## Run the App
+## Test & run  the App
 
 ```bash
-python3 app.py
+pytest
+python3 main.py
 ```
 
 ## Try It Out
@@ -49,7 +42,6 @@ To stop the app and exit the virtual environment:
    ```
    Ctrl + C
    ```
-
 2. Deactivate the virtual environment:
 
    ```bash

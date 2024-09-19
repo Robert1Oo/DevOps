@@ -1,0 +1,24 @@
+# Ignore Python bytecode and virtual environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+*.egg-info/
+
+# Ignore editor and IDE files
+.history/
+.vscode/
+.idea/
+
+# Ignore Docker-related files (usually not needed in the Docker image)
+Dockerfile
+.dockerignore
+
+# Ignore unnecessary files
+*.yml
+*.sh
+*.md
+imgs/
+
