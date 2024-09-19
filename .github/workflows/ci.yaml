@@ -58,13 +58,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: ./Docker
+        context: ./docker
         file: ./docker/Dockerfile 
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/web-app:latest
 
     - name: Logout from Docker Hub
       run: docker logout
-
-
-
